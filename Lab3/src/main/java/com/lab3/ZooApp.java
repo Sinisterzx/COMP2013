@@ -2,8 +2,10 @@ package com.lab3;
 
 public class ZooApp {
     public static void main(String[] args) {
+        System.out.println("Hello World!");
 
         Zoo zoo1 = new Zoo("London", 1);
+
         Zoo zoo2 = new Zoo("Tokyo", 2);
         Zoo zoo3 = new Zoo("New York", 3);
         Zoo zoo4 = new Zoo("Paris", 4);
@@ -11,10 +13,13 @@ public class ZooApp {
 
         Zoo zoos[] = {zoo1, zoo2, zoo3, zoo4, zoo5};
 
+
         for (int i = 0 ; i < zoos.length ; i++) {
             System.out.println(zoos[i].printInfo());
             zoos[i].BuildNewCompound();
         }
+
+
 
         ZooCorp corp = new ZooCorp(zoo1);
 
@@ -28,9 +33,11 @@ public class ZooApp {
         corp.add_employee(mark);
         corp.add_employee(emily);
 
+        mark.set_salary(20000.00);
+        emily.set_salary(1000000.44);
 
-
-
+        System.out.println(mark.calculate_bonus());
+        System.out.println(emily.calculate_bonus());
 
 
 

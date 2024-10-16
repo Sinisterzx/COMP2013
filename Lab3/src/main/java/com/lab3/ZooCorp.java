@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ZooCorp {
 
-    private ArrayList<Zoo> Many_Zoos;
-    private ArrayList<Employee> many_employees;
+    private ArrayList<Zoo> Many_Zoos = new ArrayList<>();
+    private ArrayList<Employee> many_employees = new ArrayList<>();
 
     public ZooCorp(Zoo thezoo){
         Many_Zoos.add(thezoo);

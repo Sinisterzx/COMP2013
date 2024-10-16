@@ -1,5 +1,7 @@
 plugins {
+    application
     id("java")
+
 }
 
 group = "org.example"
@@ -17,3 +19,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+application {
+    mainClass = "com.lab3.ZooApp"
+}
+

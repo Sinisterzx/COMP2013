@@ -9,17 +9,22 @@ public class Zoo {
 
     private static int no_zoos = 0;
 
-    private ArrayList<Compound> many_compounds;
+    private ArrayList<Compound> many_compounds = new ArrayList<>();
 
     public Zoo(String location, Integer compounds){
         this.location = location;
         this.compounds = compounds;
 
         for (int i = 0 ; i < compounds ; i++){
-            this.many_compounds.add(new Compound(compounds-i));
+
+            many_compounds.add(new Compound(i, new Bear("Bruce")));
+            many_compounds.add(new Compound(i, new Fish("Frankton")));
+            many_compounds.add(new Compound(i, new Bird("Brinda")));
         }
 
-        no_zoos++;
+        Zoo.no_zoos++;
+
+
     }
 
     public Zoo(){
