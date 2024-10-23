@@ -7,7 +7,7 @@ public abstract class Animals implements Maintainable{
         this.name = name;
     }
 
-    public abstract void eat();
+    public abstract short eat();
 
     public void enjoy(){
         System.out.println(this.getClass().getSimpleName() + " enjoys life as an animal.");

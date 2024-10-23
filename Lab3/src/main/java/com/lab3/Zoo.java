@@ -1,11 +1,13 @@
 package com.lab3;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Zoo {
 
     private String location;
     private int compounds;
+    private int id = 0;
 
     private static int no_zoos = 0;
 
@@ -14,12 +16,11 @@ public class Zoo {
     public Zoo(String location, Integer compounds){
         this.location = location;
         this.compounds = compounds;
+        Random rand = new Random();
+        this.id = rand.nextInt(100000000);
 
         for (int i = 0 ; i < compounds ; i++){
-
             many_compounds.add(new Compound(i, new Bear("Bruce")));
-            many_compounds.add(new Compound(i, new Fish("Frankton")));
-            many_compounds.add(new Compound(i, new Bird("Brinda")));
         }
 
         Zoo.no_zoos++;
@@ -28,6 +29,8 @@ public class Zoo {
     }
 
     public Zoo(){
+        Random rand = new Random();
+        this.id = rand.nextInt(100000000);
         this.location = "unknown";
         this.compounds = 30;
         no_zoos++;
@@ -52,6 +55,12 @@ public class Zoo {
     static int getNoZoos() {
         return no_zoos;
     }
+
+    public int get_id(){
+        return this.id;
+    }
+
+    public int get_num_compounds(){return compounds;}
 
 
 

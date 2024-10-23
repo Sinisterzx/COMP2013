@@ -7,8 +7,9 @@ public class Bird extends Animals {
     }
 
     @Override
-    public void eat() {
+    public short eat() {
         System.out.println("worms");
+        return 0;
     }
 
     @Override

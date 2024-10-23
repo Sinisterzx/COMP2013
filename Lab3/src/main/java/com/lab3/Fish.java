@@ -6,8 +6,9 @@ public class Fish extends Animals {
     }
 
     @Override
-    public void eat() {
+    public short eat() {
         System.out.println("Kelp");
+        return 0;
     }
 
     @Override
